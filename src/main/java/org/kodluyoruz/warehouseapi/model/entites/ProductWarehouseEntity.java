@@ -29,17 +29,7 @@ public class ProductWarehouseEntity {
     @ManyToOne
     @MapsId("id")
     @JoinColumn(name = "CREATED_BY", nullable = false)
-
-    public interface WarehouseCRUDRepository {
-
-        Collection<WarehouseEntity> list();
-
-        WarehouseEntity create(WarehouseEntity warehouseEntity);
-
-        WarehouseEntity update(WarehouseEntity warehouseEntity);;
-
-        void delete(Long id);
-        private User user;
+    private User user;
 
     @Column(name = "STOCK_AMOUNT", nullable = false)
     private Long stockAmount = 0;
